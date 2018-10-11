@@ -2,10 +2,10 @@
         <h2 class="text-center">开始提问</h2>
         <form class="form-group">
             <br>
-            <label for="heading">标题:</label>{{title}}
-            <input ng-model="$ctrl.title" type="text" class="form-control" id="heading" placeholder="请输入标题">
+            <label for="heading">标题:</label>
+            <input ng-model="$ctrl.question.title" type="text" class="form-control" id="heading" placeholder="请输入标题">
             <br>
-            <label for="course">课程:</label>
+            <label for="$ctrl.question.course">课程:</label>
             <select ng-model="course" class="form-control" id="course">
                 <option value="数学">数学</option>
                 <option value="英语">英语</option>
@@ -13,11 +13,11 @@
             </select>
             <br>
             <label for="question">问题描述:</label>
-            <textarea ng-model="description" class="form-control" rows="5" id="question"></textarea>
+            <textarea ng-model="$ctrl.question.description" class="form-control" rows="5" id="question"></textarea>
             <br>
             <label for="image">点击下方添加图片:</label>
             <div>
-                <textarea ng-model="img" class="form-control" rows="5" id="question" placeholder="----添加照片区域/添加照片区域/添加照片区域/添加照片区域----"></textarea>                
+                <textarea ng-model="$ctrl.question.img" class="form-control" rows="5" id="question" placeholder="----添加照片区域/添加照片区域/添加照片区域/添加照片区域----"></textarea>                
             </div>
             <br>
             <div class="row">
