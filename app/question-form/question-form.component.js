@@ -4,20 +4,19 @@ angular.
             templateUrl: 'question-form/question-form.template.html',
             controller: ['$http',function QuestionFormController($http){
                 var self = this;
-                this.question = {
+                this.questionId = "questionTest";
+                this.question ={}
+                this.question[self.questionId] = {
                     title : '',
+                    author : '某某某',
+                    date: Date.now(),
                     course : '',
                     description : '',
-                    img : '',
-                    date: 0 
+                    img : '某照片'
                 }
-                
-                // $http({
-                //     method:"post",
-                //     url: "questions.php",
-                //     date: self.question
-                // }).success(function(res){
-                //     console.log(res)
-                // })
+
+                this.postQuestion = function(){
+                    console.log(self.question[self.questionId])
+                }
             }]
         })

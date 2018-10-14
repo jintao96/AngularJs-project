@@ -1,28 +1,55 @@
 <div class="container">
-        <h2 class="text-center">开始提问</h2>
-        <form class="form-group">
-            <br>
-            <label for="heading">标题:</label>
-            <input ng-model="$ctrl.question.title" type="text" class="form-control" id="heading" placeholder="请输入标题">
-            <br>
-            <label for="$ctrl.question.course">课程:</label>
-            <select ng-model="course" class="form-control" id="course">
+    <h2 class="text-center">开始提问</h2>
+    <form>
+        <div class="form-group">
+            <label for="title">标题：</label>
+            <input type="text" class="form-control" ng-model="$ctrl.question[$ctrl.questionId].title" type="text" class="form-control"
+                id="title" placeholder="请输入标题">
+            <!-- <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                     标 题 不 能 为 空！
+                  </div> -->
+        </div>
+        <div class="form-group">
+            <label>作者：</label>{{$ctrl.question[$ctrl.questionId].author}}
+        </div>
+        <div class="form-group">
+            <label for="course">课程：</label>
+            <select class="form-control" id="course" ng-model="$ctrl.question[$ctrl.questionId].course">
                 <option value="数学">数学</option>
                 <option value="英语">英语</option>
                 <option value="语文">语文</option>
             </select>
-            <br>
-            <label for="question">问题描述:</label>
-            <textarea ng-model="$ctrl.question.description" class="form-control" rows="5" id="question"></textarea>
-            <br>
-            <label for="image">点击下方添加图片:</label>
+            <!-- <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                 请 选 择 问 题 类 别 ！
+              </div> -->
+        </div>
+        <div class="form-group">
+            <label for="questionDetail">问题描述：</label>
+            <textarea class="form-control" id="questionDetail" ng-model="$ctrl.question[$ctrl.questionId].description"
+                rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="questionImage">点击下方添加图片：</label>
             <div>
-                <textarea ng-model="$ctrl.question.img" class="form-control" rows="5" id="question" placeholder="----添加照片区域/添加照片区域/添加照片区域/添加照片区域----"></textarea>                
+                <textarea ng-model="$ctrl.question[$ctrl.questionId].img" class="form-control" rows="5" id="questionImage"
+                    placeholder="----添加照片区域/添加照片区域/添加照片区域/添加照片区域----"></textarea>
             </div>
-            <br>
-            <div class="row">
-                <a class="btn btn-primary col-6" href="#">取消</a>
-                <button class="btn btn-primary  col-6">发表问题</button>
-            </div>
-        </form>
-    </div>
+
+        </div>
+
+        <!-- <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                 请用文字或图片详细描述你的问题。
+              </div> -->
+        <div class="form-group ">
+            <a class="btn btn-info col-6 " href="#">取消</a>
+            <button class="btn btn-info  col-6" ng-click="$ctrl.postQuestion()">发表问题</button>
+        </div>
+    </form>
+</div>

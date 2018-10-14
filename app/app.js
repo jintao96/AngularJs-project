@@ -15,11 +15,12 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     when('/questions',{
       template: '<question-list></question-list>'
     }).
-    when('/questions/questionDetail',{
-      template: '<question-detail></question-detail>'
-    }).
     when('/questions/questionForm',{
       template: '<question-form></question-form>'
     }).
+    when('/questions/:questionId',{
+      template: '<question-detail></question-detail>'
+    }).
+
     otherwise({redirectTo: '/questions'});
 }]);
