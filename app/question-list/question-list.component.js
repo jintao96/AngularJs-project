@@ -15,7 +15,6 @@ angular.
                     self.dateIsDescending = self.isDescending;
                     self.veiwsIsDescending = false;
                     self.answerNumIsDescending = true;
-
                 }
                 this.orderByVeiws = function(){
                     self.orderProp = 'veiws';
@@ -33,7 +32,7 @@ angular.
                 }
                 $http.get('questions/questions.json').then(function(response){
                     self.questions = response.data;
-                     console.log(self.questions[0]);
+                    //  console.log(self.questions[0]);
 
                 })
             }]

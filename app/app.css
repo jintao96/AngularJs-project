@@ -1,25 +1,27 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+@import url(question-list/question-list.css);
+@import url(question-detail/question-detail.css);
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "微软雅黑","黑体";
+}
+a:hover{
+  text-decoration: none;
+}
+a:focus{
+  text-decoration: none;
+  color: #a98e67;
 }
 
-.menu:before {
-  content: "[";
+@media screen and (min-width: 640px)
+{
+	body{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.menu:after {
-  content: "]";
-}
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
-}

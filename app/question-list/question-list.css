@@ -1,0 +1,205 @@
+/* 问题列表 */
+.question-list{
+    width: 100%;
+    position: relative;
+  }
+  .question-list .top div:first-child{
+      padding-top: 3px;
+  }
+  .question-list .back{
+    background-image: url(../images/back.svg);
+    background-color: #fff;
+    background-size: 100%;  
+    width: 20px;
+    height: 20px;
+  }
+  .question-list header {
+    padding: 15px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  .question-list header.on{
+    padding:0;
+  }
+  
+  .question-list header .bottom{
+    margin: 5px 15px 0 15px;
+  }
+  .question-list header .bottom .searching{
+    position: relative;
+    z-index: 2;
+    padding: 4px 8px;
+    text-align: left;
+    margin: 0; 
+    width: 100%;
+    height: 30px;
+  }
+  .question-list header .bottom .course{
+    float: left;
+    width: 100%;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+  }
+  .question-list header .bottom .swiper-container{
+    width: 60%;
+    float: left;
+  }
+  .question-list header .bottom .swiper-slide{
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+  }
+  .question-list header .bottom .swiper-slide.active{
+    color: #61aff6;
+    background-color: rgba(0, 0, 0, 0.05)
+  }
+  .question-list header .bottom .swiper-slide:hover{
+    background-color: rgba(0, 0, 0, 0.02)
+  }
+  .question-list header .bottom .swiper-slide.active:after{
+    content: "";
+    position: absolute;
+    height: .2rem;
+    border-radius: 3rem;
+    background: #61aff6;
+    width: 1.2rem;
+    bottom: .07rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .question-list header .bottom .course a:hover{
+  color: #61aff6;
+  background-color: rgba(0, 0, 0, 0.02)
+  }
+  
+  .question-list header .bottom .dropdown{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    padding: 0;
+  }
+  .question-list header .bottom .dropdown .dropdown-toggle{
+    padding: 0 5px;
+  }
+  .question-list header .bottom .dropdown button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #333;
+    background-color: #fff;
+  }
+  .question-list header .bottom .dropdown .dropdown-menu a{
+    display: block;
+    width: 100%;
+  }
+  .question-list header .bottom .dropdown .dropdown-menu a:hover{
+    color: #61aff6;
+  }
+  .pageTitle p{
+    width: 100%;
+    font-size: 20px;
+    font-weight : bold;
+    margin: auto 0 auto 0;
+    color: #61aff6;
+  }
+  .question-list header span {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    opacity: 0.8;
+    margin: auto 0 auto 0;
+    padding-top: 4px;
+  }
+  .question-list header span:hover{
+    opacity: 1;
+  }
+  
+  .question-list .question{
+    margin-top: 123px;
+  }
+  .question-list .question .panel{
+    margin-bottom: 1px;
+  }
+  .question-list .question .panel .title{
+    padding: 5px 0;
+    margin-bottom: 5px;
+    font-size: 2.0rem;
+    color: rgb(63, 65, 70);
+  }
+  .question-list .question .panel article{
+    padding-bottom: 10px;
+  }
+  .question-list .question .panel .attr{
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .question-list .question .panel .attr .author{
+    color: #61aff6;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .question-list .fixed-btn{
+    position: fixed;
+    right: 30px;
+    bottom: 64px;
+  }
+  .question-list .fixed-btn .go-top{
+    display: none;
+    border: none;
+    background-image: url("../images/go-top.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:#fff;
+    width: 64px;
+    height: 64px;
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+  .question-list .fixed-btn .go-top:hover{
+    opacity: 1;
+  }
+  .question-list .fixed-btn .add-question{
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-image: url("../images/add.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:#fff;
+    opacity: 0.5;
+  }
+  .question-list .fixed-btn .add-question:hover{
+    opacity: 1;  
+  }
+  
+  
+  @media screen and (max-width: 640px)
+  {
+      
+    .question-list header {
+      padding: 5px 0;
+    }
+    .question-list .question{
+      margin-top: 103px;
+    }
+    .question-list .fixed-btn .add-question{
+      width: 40px;
+      height: 40px;
+    }
+    .question-list .fixed-btn .go-top{
+      width: 40px;
+      height: 40px;
+    }
+  
+  }
+  

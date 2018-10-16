@@ -1,27 +1,46 @@
 [
     {
-        "title": "求解高阶线性微分方程0",
+        "title": "求解高阶线性微分方程0求解高阶线性微分方程0求解高阶线性微分方程0",
         "author": "朱锦涛",
         "date": 0,
         "veiws":89,
         "course": "数学",
-        "description": "asdfasdfasf方程分方程",
-        "img": "图片数据",
-        "answerInfo": [
+        "description": "数学领域对微分方程的研究着重在几个不同的面向，但大多数都是关心微分方程的解。只有少数简单的微分方程可以求得解析解。电脑来找到其数值解。 动力系统理论强调对于微分方程系统的量化分析，而许多数值方法可以计算微分方程的数值解，且有一定的准确度。",
+        "questionImgs": ["https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=questionImg1",
+                        "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=questionImg2",
+                        "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=questionImg3"],
+        "answersInfo": [
             {
-                "user": "回答者1",
+                "userName": "朱秋寅",
+                "userAvatar":"https://dummyimage.com/35x35/d1d1d1/2b2b2b.jpg&text=user1",
                 "answerDate": 0,
-                "answerMessage": "asdaasdfasasdf"
+                "answerText": "要这么解决啊！要这么解决啊！要这么解决啊！要这么解决啊！要这么解决啊！要这么解决啊！要这么解决啊！要这么解决啊！",
+                "answerImgs":["https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg1",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg2",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg3",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg4",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg5",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg6"],
+                "support":99999
             },
             {
-                "user": "回答者2",
+                "userName": "杨幂",
+                "userAvatar":"https://dummyimage.com/35x35/d1d1d1/2b2b2b.jpg&text=user2",
                 "answerDate": 0,
-                "answerMessage": "asdaasdfasasdf"
+                "answerText": "男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛男巫哦弥陀佛",
+                "answerImgs":["https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg1",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg2",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg3",
+                            "https://dummyimage.com/1280x1024/d1d1d1/2b2b2b.jpg&text=answerImg4"],
+                "support":165
             },
             {
-                "user": "回答者3",
+                "userName": "姜子牙",
+                "userAvatar":"https://dummyimage.com/35x35/d1d1d1/2b2b2b.jpg&text=user3",
                 "answerDate": 0,
-                "answerMessage": "asdaasdfasasdf"
+                "answerText": "人之初性本善人之初性本善人之初性本善人之初性本善",
+                "answerImgs":[""],
+                "support":1699
             }
         ]
     },
@@ -128,6 +147,292 @@
             },
             {
                 "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "userName": "回答者1",
+                "userAvatar":"https://www.baidu.com/link?url=R2UABs7XV_M6PT6nT0_tDG1rJ5LMDEhzhkRX7-EwbnoWKvglh1Z3um9aCBW9hyM8dURxPZvxC-2dS9CS09QJefeYqO8aHOle7ARWhFohvi_PaZ_baagEE28UEijKWYMirMT6RqTP95uF-QUb2kVgUxgIPOBcboZ36QVlkWrcjSG&wd=&eqid=89af3b7600059ee5000000065bc5a90b",
+                "answerDate": 0,
+                "answerText": "asdaasdfasasdf",
+                "answerImgs":[""],
+                "support":16
+
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+    {
+        "title": "求解高阶线性微分方程5",
+        "author": "朱锦涛",
+        "date": 5,
+        "veiws":30,
+        "course": "数学",
+        "description": "asdfasdf",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者2",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者3",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            },
+            {
+                "user": "回答者4",
+                "answerDate": 0,
+                "answerMessage": "asdaasdfasasdf"
+            }
+        ]
+    },
+     {
+        "title": "求解高阶线性微分方程4",
+        "author": "朱锦涛",
+        "date": 4,
+        "veiws":781,
+        "course": "数学",
+        "description": "求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程求解高阶线性微分方程",
+        "img": "图片数据",
+        "answerInfo": [
+            {
+                "user": "回答者1",
                 "answerDate": 0,
                 "answerMessage": "asdaasdfasasdf"
             }
