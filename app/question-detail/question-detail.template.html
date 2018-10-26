@@ -1,5 +1,10 @@
+<!-- 
+    点击缩略图全屏放大展示(有缺陷)  评论区排序 评论点击展开按键  写评论按钮+置顶
+
+    点赞数据传到后台
+ -->
 <div class="question-detail">
-    <header style="display:none">
+    <header>
         <div class="top container-fluid">
             <div class="col-xs-3 col-sm-3">
                 <a href="#!/questions"><span class="back" style="display:inline-block;"></span></a>
@@ -13,6 +18,7 @@
     <section class="question">
         <div class="title">{{$ctrl.question.title}}
             <div class="course"><span class="label label-info">{{$ctrl.question.course}}</span></div>
+            <div class="save-btn pull-right">收藏</div>
         </div>
         <div>
             <div class="bar">
@@ -25,27 +31,188 @@
             {{$ctrl.question.description}}
         </div>
         <div class="container-fluid">
-            <div class="col-xs-6 col-md-3 question-ImgDiv" ng-repeat="questionImg in $ctrl.question.questionImgs">
-                <img class="question-Img" src="{{questionImg}}">
+            <div ng-switch="$ctrl.question.questionImgs.length">
+                <div ng-switch-when="1" class="imgDiv" ng-repeat="questionImg in $ctrl.question.questionImgs">
+                    <img class="img" style="width:100%;height:auto;margin: 0;padding: 0 10px;" src="{{questionImg}}">
+                </div>
+                <div ng-switch-default class="col-xs-6 col-md-6 imgDiv" ng-repeat="questionImg in $ctrl.question.questionImgs">
+                    <img class="img" data-toggle="" data-target="" src="{{questionImg}}">
+                </div>
+
             </div>
         </div>
     </section>
 
-    
-    <div class="answerNum">共<span>{{$ctrl.question.answersInfo.length}}</span>条回答</div>    
-    <section class="answers">
-        <div ng-repeat="answer in $ctrl.question.answersInfo">
-            <!-- <div class="user-avatar"><img src="{{answer.userAvatar}}"/></div> -->
-            <div class="user-name">{{answer.userName}}</div>
-            <div class="answer-date">{{answer.answerDate}}</div>
-            <div class="answer-text">{{answer.answerText}}</div>
-            <!-- <div class="answer-images" ng-repeat="answerImg in answer.answerImgs"><img src="{{answerImg}}"/></div> -->
-            <div class="answer-support">{{answer.support}}</div>
+    <div class="answerNum">
+        共<span>{{$ctrl.question.answersInfo.length}}</span>条回答
+        <div class="dropdown pull-right">
+            <button class="dropdown-toggle" data-toggle="dropdown" role="button">
+                排序
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="sort1"><a ng-click="$ctrl.orderBySupport()">获赞数(默认)</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="sort2"><a ng-click="$ctrl.orderByAnswerDate()">回答时间</a></li>
+            </ul>
         </div>
+    </div>
 
+    <section class="answers">
+        <div ng-show="index < 3" data-length="{{$ctrl.question.answersInfo.length}}" class="answerDiv" ng-repeat="(index,answer) in $ctrl.question.answersInfo |  orderBy:$ctrl.orderProp:$ctrl.isDescending">
+            <div class="user">
+                <div class="user-info">
+                    <div class="user-avatar "><img class="img" data-toggle="" data-target="" src="{{answer.userAvatar}}" /></div>
+                    <div class="user-name">{{answer.userName}}</div>
+                </div>
+                <div class="answer-date">{{answer.answerDate|date:"yyyy-MM-dd hh:mm"}}</div>
+            </div>
+            <div class="answer-text">{{answer.answerText}}<span ng-show="answer.answerImgs.length || answer.answerText.length > 38">查看详情</span></div>
 
+            <div class="answers-img container-fluid" style="display:none" ng-switch="answer.answerImgs.length">
+                <div ng-switch-when="1" class="imgDiv" ng-repeat="answerImg in answer.answerImgs">
+                    <img class="img" style="width:100%;height:auto;margin: 0;padding: 0 10px;" src="{{answerImg}}">
+                </div>
+                <div ng-switch-default class="col-xs-6 col-md-6 imgDiv" ng-repeat="answerImg in answer.answerImgs">
+                    <img class="img" data-toggle="" data-target="" src="{{answerImg}}">
+                </div>
+                <div class="hide-answer">收起</div>
+            </div>
+
+            <div class="answer-support">
+                <div class="support" data-key="on">
+                    <span>{{answer.support}}</span>
+                    <div class="good"></div>
+                </div>
+            </div>
+        </div>
     </section>
+    <div class="more" data-key="1">点击查看更多</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- 置顶与回答按钮 -->
+    <div class="fixed-btn">
+        <div class="go-top"><img src="../images/go-top.svg"></div>
+        <div class="add-answer" data-toggle="modal" data-target="#myModal"><img src="../images/answer.png" alt=""></div>
+    </div>
 
-
-
+    <!-- 回答表单 -->
+    <div class="adding-answer container-fluid">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">你的答案</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <textarea class="form-control" cols="30" rows="10"></textarea>
+                        </form>
+                        <div class="form-group">
+                            <label for="questionImage">点击下方添加图片：</label>
+                            <div class="add-imgs">
+                                <img src="../images/add-img.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+
+    //收藏按钮
+    $(document).on('click', '.question .save-btn', function () {
+        if ($(this).html() == "收藏") {
+            $(this).css({ color: "#f4ea2a", backgroundImage: 'url("../images/saved-btn.png")' }).html("已收藏");
+        } else {
+            $(this).css({ color: "#bfbfbf", backgroundImage: 'url("../images/save-btn.png")' }).html("收藏");
+        }
+
+    })
+    //点击显示答案详情
+    $(document).on('click', '.answer-text', function () {
+        $(this).find("span").css({ display: "none" });
+        $(this).css({ height: "auto" });
+        $(this).next().css({ display: "block" });
+    })
+    //点击收起答案详情
+    $(document).on('click', '.answers .hide-answer', function () {
+        var parent = $(this).parent();
+        parent.prev().find("span").css({ display: "inline-block" });
+        parent.prev().css({ height: "5rem" });
+        parent.css({ display: "none" });
+    })
+    //滚动效果
+    var sTop1 = $(window).scrollTop();
+    $(window).scroll(function () {
+        var sTop2 = $(window).scrollTop();
+        if ($(this).scrollTop() >= 100) {
+            $("header").addClass("on")
+            if (sTop1 < sTop2) {
+                $(".go-top").css({ display: "block" })
+                $("header").css({ top: -65 })
+            } else if (sTop1 > sTop2) {
+                $("header").css({ top: 0 })
+            } else {
+                sTop1 = $(window).scrollTop();
+            }
+        } else {
+            $(".go-top").css({ display: "none" })
+            $("header").removeClass("on")
+            $("header").css({ top: 0 })
+        }
+        sTop1 = sTop2;
+    })
+    // 点赞效果
+    $(document).on('click', '.answers .support', function () {
+        if ($(this).attr("data-key") == "on") {
+            $(this).addClass("on");
+            var supportNum = Number($(this).find("span").html()) + 1;
+            $(this).find("span").html(supportNum);
+            $(this).attr("data-key", "");
+        } else {
+            $(this).removeClass("on");
+            var supportNum = Number($(this).find("span").html()) - 1;
+            $(this).find("span").html(supportNum);
+            $(this).attr("data-key", "on");
+        }
+    })
+
+    //置顶
+    $(".go-top").click(function () {
+        goTop()
+    })
+    var goTop = function () {
+        $("html,body").finish().animate({ "scrollTop": "0px" }, 300);
+    }
+    //点击查看更多
+    $(".more").click(function(){
+        if($(this).attr("data-key") == "1"){
+            $(".answers .answerDiv").removeClass("ng-hide");
+            $(this).html("点击收起");
+            $(this).attr("data-key","");
+        }else{
+            var length = $(".answers .answerDiv").attr("data-length");
+            for( var i = 3; i < length; i++ ){
+                $(".answers .answerDiv").eq(i).addClass("ng-hide");
+            }
+            $(this).html("点击查看更多");
+            $(this).attr("data-key","1");
+        }
+    })
+</script>

@@ -24,7 +24,7 @@ angular.
                     self.answerNumIsDescending = true;
                 }
                 this.orderByAnswerNum = function(){
-                    self.orderProp = 'answerInfo';
+                    self.orderProp = 'answersInfo';
                     self.isDescending = !self.answerNumIsDescending;
                     self.answerNumIsDescending = self.isDescending;
                     self.dateIsDescending = true;

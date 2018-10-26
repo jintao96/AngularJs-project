@@ -48,6 +48,7 @@
     line-height: 30px;
   }
   .question-list header .bottom .swiper-container{
+    position: relative;
     width: 60%;
     float: left;
   }

@@ -1,5 +1,7 @@
 @import url(question-list/question-list.css);
 @import url(question-detail/question-detail.css);
+@import url(question-form/question-form.css);
+
 *{
   margin: 0;
   padding: 0;
